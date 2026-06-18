@@ -135,6 +135,13 @@ cd comentarios_tutorial_app
 
 ### 2. Crear el usuario y la base de datos
 
+En caso de tener la base de datos creado con anticipacion se puede saltar este paso
+
+Recordar que la base de datos debe tener las tablas:
+
+- comentarios, con las columnas id,contenido,tutorial_id,fecha_creacion,fecha_actualizacion
+- tutoriales, con las columnas id,titulo,descripcion,fecha_publicacion
+
 Abrir PostgreSQL con el usuario administrador:
 
 ```powershell
