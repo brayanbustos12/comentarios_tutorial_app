@@ -7,7 +7,7 @@
 - [x] Crear los modelos de datos.
 - [x] Configurar las migraciones.
 - [x] Implementar tutoriales.
-- [ ] Implementar comentarios.
+- [x] Implementar comentarios.
 - [ ] Configurar integración continua.
 - [ ] Crear la interfaz Angular.
 - [ ] Documentar la arquitectura.
