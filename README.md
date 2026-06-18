@@ -35,3 +35,4 @@ En construcción.
 - [Requerimientos](documentacion/requisitos.md)
 - [Hoja de ruta](documentacion/hoja-ruta.md)
 - [Configuración de la base de datos](documentacion/configuracion-base-datos.md)
+- [Documentación de la API REST](documentacion/api-rest.md)
