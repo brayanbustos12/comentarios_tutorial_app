@@ -8,8 +8,6 @@
 - [x] Configurar las migraciones.
 - [x] Implementar tutoriales.
 - [x] Implementar comentarios.
-- [ ] Configurar integración continua.
-- [ ] Crear la interfaz Angular.
-- [ ] Documentar la arquitectura.
-- [ ] Agregar evidencias.
+- [x] Crear la interfaz Angular.
+- [x] Documentar la arquitectura.
 - [ ] Publicar la versión 1.0.0.

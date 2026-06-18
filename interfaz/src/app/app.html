@@ -1,0 +1,131 @@
+<main class="contenedor">
+  <header>
+    <h1>Tutoriales y comentarios</h1>
+    <p>Aplicación de aprendizaje virtual</p>
+  </header>
+
+  @if (mensajeError()) {
+    <p class="error">{{ mensajeError() }}</p>
+  }
+
+  <section class="panel">
+    <h2>Registrar tutorial</h2>
+
+    <form (ngSubmit)="crearTutorial()" class="formulario">
+      <label>
+        Título
+        <input
+          type="text"
+          name="titulo"
+          [(ngModel)]="nuevoTutorial.titulo"
+          minlength="3"
+          maxlength="200"
+          required
+        />
+      </label>
+
+      <label>
+        Descripción
+        <textarea
+          name="descripcion"
+          [(ngModel)]="nuevoTutorial.descripcion"
+          minlength="10"
+          required
+        ></textarea>
+      </label>
+
+      <label>
+        Fecha de publicación
+        <input
+          type="datetime-local"
+          name="fechaPublicacion"
+          [(ngModel)]="nuevoTutorial.fecha_publicacion"
+          required
+        />
+      </label>
+
+      <button type="submit">Guardar tutorial</button>
+    </form>
+  </section>
+
+  <div class="columnas">
+    <section class="panel">
+      <h2>Tutoriales</h2>
+
+      @if (cargandoTutoriales()) {
+        <p class="cargando">Cargando tutoriales...</p>
+      } @else if (tutoriales().length === 0) {
+        <p>No hay tutoriales registrados.</p>
+      }
+
+      <div class="lista">
+        @for (tutorial of tutoriales(); track tutorial.id) {
+          <button
+            type="button"
+            class="tutorial"
+            [class.seleccionado]="tutorialSeleccionado()?.id === tutorial.id"
+            (click)="seleccionarTutorial(tutorial)"
+          >
+            <strong>{{ tutorial.titulo }}</strong>
+            <span>{{ tutorial.fecha_publicacion | date: 'medium' }}</span>
+          </button>
+        }
+      </div>
+    </section>
+
+    <section class="panel">
+      @if (tutorialSeleccionado(); as tutorial) {
+        <h2>{{ tutorial.titulo }}</h2>
+        <p>{{ tutorial.descripcion }}</p>
+
+        <h3>Comentarios</h3>
+
+        <form (ngSubmit)="crearComentario()" class="comentario-formulario">
+          <textarea
+            name="nuevoComentario"
+            [(ngModel)]="nuevoComentario"
+            placeholder="Escribe un comentario"
+            required
+          ></textarea>
+          <button type="submit">Agregar comentario</button>
+        </form>
+
+        @if (cargandoComentarios()) {
+          <p class="cargando">Cargando comentarios...</p>
+        } @else if (comentarios().length === 0) {
+          <p>No hay comentarios para este tutorial.</p>
+        }
+
+        <div class="lista">
+          @for (comentario of comentarios(); track comentario.id) {
+            <article class="comentario">
+              <p>{{ comentario.contenido }}</p>
+              <small>
+                {{ comentario.fecha_creacion | date: 'short' }}
+              </small>
+              <div class="acciones">
+                <button
+                  type="button"
+                  class="secundario"
+                  (click)="editarComentario(comentario)"
+                >
+                  Editar
+                </button>
+                <button
+                  type="button"
+                  class="peligro"
+                  (click)="eliminarComentario(comentario)"
+                >
+                  Eliminar
+                </button>
+              </div>
+            </article>
+          }
+        </div>
+      } @else {
+        <h2>Comentarios</h2>
+        <p>Selecciona un tutorial para consultar sus comentarios.</p>
+      }
+    </section>
+  </div>
+</main>
