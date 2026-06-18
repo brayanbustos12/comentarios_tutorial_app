@@ -164,6 +164,20 @@ También es posible importar automáticamente el contrato desde:
 http://127.0.0.1:8000/openapi.json
 ```
 
+## Consumo desde Angular
+
+La API utiliza el middleware CORS de FastAPI para aceptar solicitudes desde el
+servidor local de Angular. Los orígenes permitidos durante el desarrollo son:
+
+```text
+http://localhost:4200
+http://127.0.0.1:4200
+```
+
+Los métodos permitidos son `GET`, `POST`, `PUT`, `DELETE` y `OPTIONS`. Los
+orígenes se configuran mediante la variable `ORIGENES_PERMITIDOS` del archivo
+`.env` y se documentan sin secretos en `.env.example`.
+
 ## Códigos de respuesta
 
 | Código | Significado |
