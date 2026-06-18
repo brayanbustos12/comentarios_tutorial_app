@@ -1,0 +1,135 @@
+:host {
+  display: block;
+}
+
+.contenedor {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  color: #17324d;
+}
+
+.panel {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #dbe3ea;
+  border-radius: 0.75rem;
+  background: white;
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1.5rem;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid #aab8c4;
+  border-radius: 0.4rem;
+}
+
+textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+button {
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: #1769aa;
+  color: white;
+  cursor: pointer;
+}
+
+.lista {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.tutorial {
+  display: grid;
+  gap: 0.3rem;
+  width: 100%;
+  text-align: left;
+  background: #eef4f8;
+  color: #17324d;
+}
+
+.tutorial.seleccionado {
+  outline: 2px solid #1769aa;
+}
+
+.comentario-formulario {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.comentario {
+  padding: 0.9rem;
+  border-left: 4px solid #1769aa;
+  background: #f5f8fa;
+}
+
+.comentario p {
+  margin-top: 0;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.secundario {
+  background: #526678;
+}
+
+.peligro {
+  background: #b42318;
+}
+
+.error {
+  padding: 0.75rem;
+  border-radius: 0.4rem;
+  background: #fee4e2;
+  color: #912018;
+}
+
+.cargando {
+  color: #526678;
+  font-style: italic;
+}
+
+@media (max-width: 800px) {
+  .columnas,
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+}

@@ -12,3 +12,4 @@
 - Persistencia con PostgreSQL, SQLAlchemy y Alembic.
 - Documentación de la API REST y de la configuración de la base de datos.
 - Configuración CORS para permitir el consumo de la API desde Angular.
+- Interfaz Angular mínima para gestionar tutoriales y comentarios.
