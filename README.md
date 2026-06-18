@@ -118,7 +118,7 @@ Verificar las instalaciones:
 git --version
 python --version
 node --version
-npm.cmd --version
+npm --version
 & "C:\Program Files\PostgreSQL\18\bin\psql.exe" --version
 ```
 
@@ -150,8 +150,6 @@ PostgreSQL solicitará la contraseña definida durante su instalación.
 Ejecutar dentro de `psql`:
 
 ```sql
-CREATE USER tutoriales_usuario
-WITH LOGIN PASSWORD 'TU_CLAVE_LOCAL';
 
 CREATE DATABASE tutoriales_comentarios
 WITH
