@@ -1,5 +1,3 @@
-# comentarios_tutorial_app
-Prueba técnica - API REST de tutoriales y comentarios
 # Aplicación de tutoriales y comentarios
 
 Prueba técnica para desarrollar una aplicación web que permita gestionar
@@ -20,22 +18,20 @@ En construcción.
 
 ## Tecnologías
 
-- Python
-- FastAPI
-- PostgreSQL
-- SQLAlchemy
-- Alembic
-- Angular
-- Docker Compose
-- Pytest
+- Python 3.13.
+- FastAPI.
+- PostgreSQL 18.
+- SQLAlchemy.
+- Alembic.
+- Angular.
 
 ## Estructura
 
 - `servidor`: API REST y lógica del negocio.
 - `interfaz`: aplicación web Angular.
-- `documentacion`: requerimientos y arquitectura.
 
 ## Documentación
 
 - [Requerimientos](documentacion/requisitos.md)
 - [Hoja de ruta](documentacion/hoja-ruta.md)
+- [Configuración de la base de datos](documentacion/configuracion-base-datos.md)
