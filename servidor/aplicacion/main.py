@@ -1,8 +1,7 @@
 from fastapi import FastAPI
-
-from aplicacion.api.v1.enrutador import enrutador_api
 from fastapi.responses import RedirectResponse
 
+from aplicacion.api.v1.enrutador import enrutador_api
 
 def crear_aplicacion() -> FastAPI:
     aplicacion = FastAPI(
@@ -16,7 +15,7 @@ def crear_aplicacion() -> FastAPI:
     aplicacion.include_router(
         enrutador_api,
         prefix="/api/v1",
-    )    
+    )
 
     return aplicacion
 
